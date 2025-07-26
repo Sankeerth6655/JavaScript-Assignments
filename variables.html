@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Variables</title>
+    </head>
+    <body>
+        <script>
+            var sub=`fullstack`;
+            var wish=`welcome to ${sub}`;
+            document.write(wish,"<br>");
+
+            var deci=100;
+            document.write(deci,"<br>");
+
+            var doubl=123.33434;
+            document.write(doubl,"<br>");
+
+            var hex=0x12AF;
+            document.write(hex,"<br>");//4783
+
+            var oct=0o234;
+            document.write(oct,"<br>");//156
+
+            var bin=0b1010;
+            document.write(bin,"<br>");//10
+            
+            //arithmetic operations
+            var num1=100;
+            var num2=50;
+            var addition=num1+num2;
+            document.write(addition,"<br>");
+
+            var subtraction=num1-num2;
+            document.write(subtraction,"<br>");
+
+            var multiplication=num1*num2;
+            document.write(multiplication,"<br>");
+
+            var division=num1/num2;
+            document.write(division,"<br>");
+
+            //boolean
+            var flag1=true;
+            document.write(flag1,"<br>");//true
+            var flag2=false;
+            document.write(flag2,"<br>");//false
+            flag1?document.write(wish,"<br>"):document.write(sub,"<br>");//welcome to fullstack
+            flag2?document.write(wish,"<br>"):document.write(sub,"<br>");//fullstack
+
+            //undefined
+            var x;
+            document.write(x,"<br>");  //undefined
+            document.write(x+10,"<br>"); //NaN
+            document.write(x-10,"<br>"); //NaN
+            document.write(x+x,"<br>"); //NaN
+
+            //null
+            var y=null;
+            document.write(y,"<br>");//null
+            document.write(y+10,"<br>");//10
+            document.write(y/10,"<br>");//0
+
+            // what are the differences between undefined and null?
+
+            //bigint
+            var largenum=123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789n;//suffix 'n' is important.
+            var num=123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789;
+            document.write(largenum,"<br>"); //prints the large number
+            document.write(num,"<br>"); // shows error format.
+            
+            //Symbol
+            var s= Symbol("Excelr <br>");
+            document.write(s); //error
+        </script>
+    </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Promises</title>
+    </head>
+    <body>
+        <script>
+            // let promise1= new Promise((resolve,reject)=>{
+            //     resolve("Success!!");
+            // });
+            // // promise1.then((posRes)=>{
+            // //     document.write(posRes);
+            // // },(errRes)=>{});   ----old approaach
+
+            // let consume = async()=>{
+            //     let res=await promise1;
+            //     document.write(res);
+            // }
+            // consume();
+
+            //display "welcome to excelr with promises"
+
+            // let promises=new Promise((resolve,reject)=>{
+            //     resolve("welcome to excelr");
+            // });
+
+            // let consume=async()=>{
+            //     let res=await promises;
+            //     document.write(res);
+            // }
+            // consume();
+
+            // let promise1=new Promise((resolve,reject)=>{
+            //     setTimeout(()=>{
+            //         resolve("ExcelR");
+            //     },5000);
+            // });
+            // // promise1.then((posRes)=>{
+            // //     document.write(posRes);
+            // // },(negRes)=>{
+            // //     document.write(negRes);
+            // // })
+            // let consume=async()=>{
+            //     let res=await promise1;
+            //     document.write(res);
+            // }
+            // consume();
+
+            //display "JavaScript" after 10 seconds with promises.
+
+            // let promise1 = new Promise((resolve,reject)=>{
+            //     setTimeout(()=>{
+            //         resolve("JavaScript");
+            //     },10000);
+            // });
+            // let consume=async()=>{
+            //     let res=await promise1;
+            //     document.write(res);
+            // }
+            // consume();
+
+            // let promise1=new Promise((resolve, reject)=>{
+            //     setTimeout(()=>{
+            //         resolve("Hello");
+            //     },5000);
+            // })
+            // let promise2 = new Promise((resolve, reject)=>{
+            //     setTimeout(()=>{
+            //         reject("ExcelR");
+            //     },10000)
+            // })
+            // let promise3=new Promise((resolve,reject)=>{
+            //     setTimeout(()=>{
+            //         resolve("JavaScript")
+            //     },15000)
+            // })
+            // // Promise.all([promise1,promise2,promise3]).then((posRes)=>{
+            // //     console.table(posRes);
+            // // },(errRes)=>{
+            // //     console.log(errRes);
+            // // }) //all function stores the results in the form of an array.if there is an failure promise, only it is executed.
+
+            // // Promise.race([promise1,promise2,promise3]).then((posRes)=>{
+            // //     console.log(posRes)
+            // // },(errRes)=>{
+            // //     console.log(errRes)
+            // // })  //lets you know which promise excutes first/fastest.
+
+            // Promise.allSettled([promise1,promise2,promise3]).then((posRes)=>{
+            //     console.table(posRes)
+            // },(errRes)=>{
+            //     console.log(errRes)
+            // })
+
+            //promise1 --- 2sec,promise2---4sec,promise3----6sec,promise4----8sec
+            //use all,race,allSettled functions
+            let promise1=new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("HTML")
+                },2000)
+            });
+            let promise2=new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    reject("CSS")
+                },4000);
+            })
+            let promise3=new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("JavaScript")
+                },6000)
+            })
+            let promise4=new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    reject("React")
+                },8000)
+            })
+
+            // Promise.all([promise1,promise2,promise3,promise4]).then((posRes)=>{
+            //     console.table(posRes);
+            // },(errRes)=>{
+            //     console.table(errRes)
+            // });
+
+            // Promise.race([promise1,promise2,promise3,promise4]).then((posRes)=>{
+            //     console.table(posRes);
+            // },(errRes)=>{
+            //     console.log(errRes);
+            // })
+
+            // Promise.allSettled([promise1,promise2,promise3,promise4]).then((posRes)=>{
+            //     console.table(posRes);
+            // },(errRes)=>{
+            //     console.log(errRes);
+            // })
+
+            let addition=(num)=>{
+                return new Promise((resolve,reject)=>{
+                    resolve(num+5);
+                })
+            }
+            let subtraction=(num)=>{
+                return new Promise((resolve,reject)=>{
+                    resolve(num-3)
+                })
+            }
+            let multiplication=(num)=>{
+                return new Promise((resolve,reject)=>{
+                    resolve(num*2)
+                })
+            }
+            let division=(num)=>{
+                return new Promise((resolve,reject)=>{
+                    resolve(num/2)
+                })
+            }
+            let consume=async()=>{
+                let addRes=await addition(5);
+                let subRes=await subtraction(addRes);
+                let mulRes=await multiplication(subRes);
+                let divRes=await division(mulRes);
+                document.write(divRes);
+            }
+            consume();
+        </script>
+    </body>
+</html>

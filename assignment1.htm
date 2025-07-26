@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment-1</title>
+    </head>
+    <body>
+        
+        <!-- 16
+        First Name:<input type="text" placeholder="enter your first name" id="fname">
+        <br><br>
+        Last Name:<input type="text" placeholder="enter your last name" id="lname">
+        <br><br>
+        <button onclick="concat()">
+            Full Name
+        </button>
+        <br>
+        <p id="res"></p>
+
+        <script>
+            let concat=()=>{
+                let x=document.getElementById("fname").value;
+                let y=document.getElementById("lname").value;
+                let z=x.concat(" ",y);
+                document.getElementById("res").innerHTML="welcome to "+z;
+            }
+        </script> -->
+
+        <!-- 17
+        a <input type="number" id="fno">
+        <br><br>
+        b <input type="number" id="sno">
+        <br><br>
+        <button onclick="add()">add</button> &nbsp;
+        <button onclick="sub()">sub</button> &nbsp;
+        <button onclick="mul()">mul</button> &nbsp;
+        <button onclick="div()">div</button> &nbsp;
+        <br><br>
+        Output: <span id="res"></span>
+        <script>
+            function add(){
+                let x=parseInt(document.getElementById("fno").value);
+                let y=parseInt(document.getElementById("sno").value);
+                z=x+y;
+                document.getElementById("res").innerHTML=z;
+            }
+            function sub(){
+                let x=parseInt(document.getElementById("fno").value);
+                let y=parseInt(document.getElementById("sno").value);
+                z=x-y;
+                document.getElementById("res").innerHTML=z;
+            }
+            function mul(){
+                let x=parseInt(document.getElementById("fno").value);
+                let y=parseInt(document.getElementById("sno").value);
+                z=x*y;
+                document.getElementById("res").innerHTML=z;
+            }
+            function div(){
+                let x=parseInt(document.getElementById("fno").value);
+                let y=parseInt(document.getElementById("sno").value);
+                z=x/y;
+                document.getElementById("res").innerHTML=z;
+            }
+        </script> -->
+
+        <!-- 18
+        a <input type="text" id="fno">
+        <br><br>
+        b <input type="text" id="lno">
+        <br><br>
+        <button onclick="swap()">Swap</button>
+        <br><br>
+        a <input type="text" id="fres">
+        <br><br>
+        b <input type="text" id="lres">
+
+        <script>
+            function swap(){
+                let x=document.getElementById("fno").value;
+                let y=document.getElementById("lno").value;
+                document.getElementById("fres").value=y;
+                document.getElementById("lres").value=x;
+            }
+        </script> -->
+
+        <!-- Annual Salary <input type="text" id="year">
+        <br><br>
+        Monthly Salary <input type="text" id="month">
+        <br><br>
+        <button onclick="cal()">Calculate</button>
+        <script>
+            function cal(){
+                let x=document.getElementById("year").value;
+                let y=x/12;
+                document.getElementById("month").value=y;
+            }
+        </script> -->
+
+        <!--21
+        Product Name <input type="text" id="pname">
+        <br><br>
+        Product Cost <input type="text" id="pcost">
+        <br><br>
+        Quantity <input type="text" id="pquantity">
+        <br><br>
+        <button onclick="cal()">Calculate</button>
+        <br><br>
+        Final Cost <input type="text" id="res">
+        
+        <script>
+            let cal=function(){
+                let x=document.getElementById("pcost").value;
+                let y=document.getElementById("pquantity").value;
+                let z=x*y;
+                document.getElementById("res").value=z;
+            }
+        </script> -->
+
+        <!-- 22
+        S1 Marks <input type="text" id="s1">
+        <br><br>
+        S2 Marks <input type="text" id="s2">
+        <br><br>
+        S3 Marks <input type="text" id="s3">
+        <br><br>
+        Total <input type="text" id="tot">
+        <br><br>
+        Average <input type="text" id="avg">
+        <br><br>
+        <button onclick="tot()">Total</button>  &nbsp;
+        <button onclick="avg()">Average</button>
+
+        <script>
+            let tot=function(){
+                let s1=parseInt(document.getElementById("s1").value);
+                let s2=parseInt(document.getElementById("s2").value);
+                let s3=parseInt(document.getElementById("s3").value);
+                document.getElementById("tot").value=s1+s2+s3;
+            }
+            let avg=function(){
+                let s1=parseInt(document.getElementById("s1").value);
+                let s2=parseInt(document.getElementById("s2").value);
+                let s3=parseInt(document.getElementById("s3").value);
+                document.getElementById("avg").value=(s1+s2+s3)/3;
+            }
+        </script> -->
+
+        <!-- 23
+        Loan Amount<input type="text" id="loan">
+        <br><br>
+        Interest rate<input type="text" id="rate">
+        <br><br>
+        Time Period<input type="text" id="time">
+        <br><br>
+        Interest Amount<input type="text" id="int">
+        <br><br>
+        Final Amount<input type="text" id="final">
+        <br><br>
+        <button onclick="int()">Interest Amount</button> &nbsp;
+        <button onclick="final()">Final Amount</button>
+
+        <script>
+            let int=()=>{
+                let p=parseInt(document.getElementById("loan").value);
+                let t=parseInt(document.getElementById("time").value);
+                let r=parseInt(document.getElementById("rate").value);
+                let si=(p*t*r)/100;
+                document.getElementById("int").value=si;
+            }
+            let final=()=>{
+                let p=parseInt(document.getElementById("loan").value);
+                let t=parseInt(document.getElementById("time").value);
+                let r=parseInt(document.getElementById("rate").value);
+                let si=(p*t*r)/100;
+                let tot=p+si;
+                document.getElementById("final").value=tot;
+                } 
+        </script> -->
+
+        <!-- 24
+        Product Name <input type="text" id="pname"><br><br>
+        Product Cost <input type="text" id="pcost"><br><br>
+        GST (%) <input type="text" id="gstp"><br><br>
+        GST Amount <input type="text" id="gsta"><br><br>
+        <button onclick="gsta()">GST Amount</button> &nbsp; <button onclick="final()">Final Amount</button><br><br>
+        Final Cost <input type="text" id="final">
+
+        <script>
+            let gsta=()=>{
+                let x=parseInt(document.getElementById("pcost").value);
+                let y=parseInt(document.getElementById("gstp").value);
+                let res=x*(y/100);
+                document.getElementById("gsta").value=res;
+            }
+            let final=()=>{
+                let x=parseInt(document.getElementById("pcost").value);
+                let y=parseInt(document.getElementById("gstp").value);
+                let res=x*(y/100);
+                let tot=x+res;
+                document.getElementById("final").value=tot;
+            }
+        </script> -->
+
+        <script>
+            let demo_func=()=>{
+                return [{"pid":"111","pname":"p_one","pcost":"10000"},
+                        {"pid":"222","pname":"p_two","pcost":"20000"},
+                        {"pid":"333","pname":"p_three","pcost":"30000"},
+                        {"pid":"444","pname":"p_four","pcost":"40000"},
+                        {"pid":"555","pname":"p_five","pcost":"50000"}]
+            }
+
+            let arr=demo_func();
+            document.write(`<table border="1" align="center" cellspacing="10px" cellpadding="10px" align-items="center">`);
+                document.write(`<tr>
+                                    <th>pid</th>
+                                    <th>pname</th>
+                                    <th>pcost</th>
+                                </tr>`);
+            arr.forEach((element,index)=>{
+                let {pid,pname,pcost}=element;
+                document.write(`<tr>
+                                    <td>${pid}</td>
+                                    <td>${pname}</td>
+                                    <td>${pcost}</td>
+                                </tr>`);
+            });
+            document.write(`</table>`);
+        </script>
+    </body>
+</html>

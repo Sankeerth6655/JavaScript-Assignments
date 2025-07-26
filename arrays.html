@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays</title>
+    </head>
+    <body>
+         <script>
+            var arr1= [100,200,300,400,500];
+            var x=arr1[0];
+            document.write(x,"<br>");
+            var y=arr1[1];
+            document.write(y,"<br>");
+
+            var arr2=[`HTML`,`CSS`,`JavaScript`,`React`,`NodeJS`,`MongoDB`,`MERN`];
+            var arr3=[10,20,30,40,50];
+            var [a,b,c,d,e]=arr3; //new method to access the array elements--DESTRUCTURING.
+            document.write(a," ",b," ",c," ",d," ",e,"<br>");
+
+            var arr4=['Frontend','Backend','Database'];
+            var [p,q,r]=arr4;
+            document.write(p," ",q," ",r,"<br>");
+
+            //forEach() loop
+            arr5=[100,200,300,400,500];
+            arr5.forEach((value,address)=>{
+                document.write(value," : ",address,"<br>");
+            });
+
+            var arr6=[10,20,30,40,50,60,70,80,90,100];
+            arr6.forEach((a,b)=>{
+                document.write(a,"<br>");
+            });
+
+            var arr7=['HTML','CSS','JavaScript','React','NodeJS','MongoDB'];
+            arr7.forEach((x,y)=>{
+                document.write(x,"<br>");
+            });
+
+            //for..of loop
+            var arr8=[10,20,30,40,50];
+            for(var x of arr8){
+                document.write(x,"<br>");
+            }
+
+            for(var x of arr6){
+                document.write(x,"<br>");
+            }
+
+            for(var x of arr7){
+                document.write(x,"<br>");
+            }
+
+            //for() loop (old method)
+            var arr9=[10,20,30,40,50];
+            for(var i=0;i<5;i++){
+                document.write(arr9[i],"<br>");
+            }
+
+            for(var i=0;i<6;i++){
+                document.write(arr7[i],"<br>");
+            }
+
+            //while loop (outdated loop)
+            var arr10=[100,200,300,400,500];
+            var i=0;
+            while(i<5){
+                document.write(arr10[i]," ");
+                if(i==4){
+                    document.write("<br>");
+                }
+                i++;
+            }
+            var i=0;
+            while(i<6){
+                document.write(arr7[i]," ");
+                i++;
+            }
+            document.write("<br>");
+            
+            //do while loop
+            var arr11=[10000,20000,30000];
+            var i=0;
+            do{
+                document.write(arr11[i]," ");
+                i++;
+            }while(i<3);
+            document.write("<br>");
+
+            var i=0;
+            do{
+                document.write(arr6[i]," ");
+                i++;
+            }while(i<5);
+            document.write("<br>");
+
+            var i=0;
+            do{
+                document.write(arr7[i]," ");
+                i++;
+            }while(i<6);
+            document.write("<br>");
+
+         </script>
+
+         <script>
+            var assignment=[100,`Hello`,true,undefined,null,100n];
+            //iterate the above with forEach,for..of,for,while & do..while loops.
+            //forEach()
+            assignment.forEach((c,d)=>{
+                document.write(c," ");
+            });
+            document.write("<br>");
+            
+            //for..(of)
+            for(var p of assignment){
+                document.write(p," ");
+            }
+            document.write("<br>");
+            
+            //for()
+            for(var i=0;i<6;i++){
+                document.write(assignment[i]," ");
+            }
+            document.write("<br>");
+            
+            //while
+            var i=0;
+            while(i<6){
+                document.write(assignment[i]," ");
+                i++;
+            }
+            document.write("<br>");
+
+             //do while
+             var i=0;
+             do{
+                document.write(assignment[i]," ");
+                i++;
+             }while(i<6);
+         </script>
+    </body>
+</html>

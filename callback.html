@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function diff(a,b,cb){
+            
+        //     if(isNaN(a) || isNaN(b)){
+        //         cb("wrong argument passed");
+        //     }
+        //     else{
+        //         var z = a-b;
+        //         cb(z);
+        //     }
+        // }
+        // diff(35,10,function(x){
+        //     console.log(x);
+        // })
+
+        function add(a,b,cb){
+            if(isNaN(a) || isNaN(b)){
+                cb("wrong argument passed",null);
+            }
+            else{
+                var z=a+b;
+                cb(null,z);
+            }
+        }
+
+        add("hey",34,function(x,y){
+            if(x){
+                console.log(x);
+            }else{
+                console.log(y);
+            }
+        });
+    </script>
+</body>
+</html>

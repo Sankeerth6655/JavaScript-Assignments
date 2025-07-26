@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Print the greatest of all 2-digit numbers present in an array.
+        // Write a program to remove elements from an array which are not in the ascending order Ex: Original array: [12,34,11,56,37,98,23,67,109,45] Output : [12,34,56,98,109]
+        // Write a program to sort the array based on the number of occurrences of elements Ex: original array: [1,2,5,6,2,1,6,1,2,6,2,1,2]; After the logic: [5,6,6,6,1,1,1,1,2,2,2,2,2]; //5 occurred one time,6 three times,1 occurred 4 times, 2 occurred 5 times
+        //                             var ar = [19,12,23,4,15];
+        //                             var br = [26,37,18,79,10];
+        //                             a)Write script to merge array as the values of ar in the first and values of br next
+        //                                 Expected output: [19,12,23,4,15,26,37,18,79,10];
+        //                             b)Write script to merge array as the values of ar in the first and values of br next
+        //                                 Expected output: [26,37,18,79,10,19,12,23,4,15];
+                                
+        //                             var ar = [1,2,3,7,8,9];
+        //                             var br = [4,5,6];
+        //                             Expected output: [1,2,3,4,5,6,7,8,9];
+                                
+        // insert An Element Desired or Specific Position In An Array
+        // Remove Duplicates Items In An Array
+        // Delete Element From Array At Desired Or Specific Position
+        // Check String Is Palindrome Or Not Using For Loop
+        // Convert All Input String Simultaneously Into Asterisk ( * )
+        // Read and print elements of the array. – using recursion.
+        // Print all negative elements in an array.
+        // Sum of all array elements. – using recursion.
+        // Find a maximum and minimum element in an array. – using recursion.
+        // Get the second largest element in an array.
+        // Count the total number of even and odd elements in an array.
+        // Count the total number of negative elements in an array.
+        // Copy all elements from an array to another array.
+        // Insert an element in an array.
+        // Delete an element from an array at the specified position.
+        // Count frequency of each element in an array.
+        // Print all unique elements in the array.
+        // Count the total number of duplicate elements in an array.
+        // Delete all duplicate elements from an array.
+        // Merge two arrays to the third array.
+        // Find the reverse of an array.
+        // Put even and odd elements of an array in two separate arrays.
+        // Search an element in an array.
+        // Sort array elements in ascending or descending order.
+        // Sort even and odd elements of the array separately.
+        // Right rotate an array.
+
+        arr=[24,36,43,32,12,15];
+
+        arr.push(90);
+        console.log(arr);
+
+        arr.pop();
+        console.log(arr);
+
+        arr.shift();
+        console.log(arr);
+
+        arr.unshift(99);
+        console.log(arr); //[99, 36, 43, 32, 12, 15]
+
+        arr.splice(1,3);
+        console.log(arr);
+
+        arr.splice(1,0,"bunny",77,14);
+        console.log(arr); //[99, 'bunny', 77, 14, 12, 15]
+
+        arr.splice(3,2,"sunny");
+        console.log(arr); //[99, 'bunny', 77, 'sunny', 15]
+
+        console.log(arr.at(3));
+        console.log(arr.at(-3));
+
+        brr=[12,14,16,7,10,7];
+        crr=arr.concat(brr);
+        console.log(crr); //seperate address is allocated for concatinated ones.
+
+        ar=[10,20];
+        br=[10,20];
+        cr=ar;
+        console.log(ar==br);
+        console.log(ar==cr);
+        cr[1]='bunny';
+        console.log(ar);
+
+        arr.fill('#',1);
+        console.log(arr);
+
+        console.log(brr.includes(7));
+        console.log(brr.includes(11));
+
+        console.log(brr.indexOf(7));
+        console.log(brr.indexOf(11));
+
+        console.log(brr.lastIndexOf(7));
+
+        console.log(brr.join("#"));  //doesnot modify the original array
+        console.log(brr.join());// if nothing is given, it joins with , and turn it into string.
+        console.log(brr.join(''));
+        var a=brr.join('');
+        console.log(Number(a)+2);
+
+        console.log(brr.reverse());
+        console.log(brr);//effects original array
+
+        var k= brr.slice(3,5);
+        console.log(k);
+        var l= brr.slice(3,4);
+        console.log(l);
+
+        m=brr.toReversed();
+        console.log(m);
+        console.log(brr);//doesnt effect original array
+
+        brr.forEach(function(a,b,c){
+            console.log("hello");
+        });// a is for the element, b is for index and c is for the whole array.
+
+        ar.map(function(){
+            console.log("hello");
+        })
+
+        
+
+
+
+    </script>
+</body>
+</html>

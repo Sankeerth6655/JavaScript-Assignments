@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions</title>
+    </head>
+
+    <body>
+
+    <!-- <script>
+        function func_one(){
+            document.write("welcome to function declaration");
+        }
+        func_one();
+    </script> -->
+    <!-- <script>
+        let func_one=function(){
+            document.write("welcome to function expression");
+        }
+        func_one();
+    </script> -->
+    <!-- <script>
+        let func_one=()=>{
+            document.write("welcome to arrow function");
+        }
+        func_one();
+    </script> -->
+
+    <!-- <script>
+        function test_func(){
+            document.write("welcome to fullstack","<br>");
+            document.write("excelr","<br>");
+        }
+        test_func();
+
+        let test_func1 = function(){
+            document.write("welcome to fullstack","<br>");
+            document.write("excelr","<br>");
+        }
+        test_func1();
+
+        let test_func2=()=>{
+            document.write("welcome to fullstack","<br>");
+            document.write("excelr","<br>");
+        }
+        test_func2();
+    </script> -->
+
+    <!-- <script>
+        let fullstack_func= function(){
+            document.write(`reactjs`,`<br>`);
+            document.write(`nodejs`,`<br>`);
+            document.write(`mongodb`,`<br>`);
+        }
+        fullstack_func();
+
+        function fullstack_func1(){
+            document.write(`reactjs`,`<br>`);
+            document.write(`nodejs`,`<br>`);
+            document.write(`mongodb`,`<br>`);
+        }
+        fullstack_func1();
+
+        let fullstack_func2 = ()=>{
+            document.write(`reactjs`,`<br>`);
+            document.write(`nodejs`,`<br>`);
+            document.write(`mongodb`,`<br>`);
+        }
+        fullstack_func2();
+    </script> -->
+
+    <!-- <script>
+        let addition =() =>{
+            let x=100;
+            let y=200;
+            let z=x+y;
+            document.write(`addition.....${z}`);
+        }
+        addition();
+
+        function addition1(){
+            let x=100;
+            let y=200;
+            let z=x+y;
+            document.write(`addition.....${z}`);
+        }
+        addition1();
+
+        let addition2=function(){
+            let x=100;
+            let y=200;
+            let z=x+y;
+            document.write(`addtion....${z}`);
+        }
+        addition2();
+    </script> -->
+
+    <!-- <script>
+        function addition(x,y){
+            let res=x+y;
+            document.write(`${res}`);
+        }
+        addition(100,200);
+    </script> -->
+
+    <!-- <script>
+        let find=(num1)=>{
+            if(num1 % 2 == 0){
+                document.write("even");
+            }
+            else{
+                document.write("odd");
+            }
+        }
+
+        find(20);
+        find(3);
+    </script> -->
+<!-- 
+    <script>
+        let func=(param1,param2)=>{
+            document.write(param1,param2,"<br>");
+        }
+
+
+        func(100,200);   //100200
+        func();          //undefinedundefined
+        func(undefined,"hello");        //undefinedhello
+        func(10,20,30);     //1020 --- the extra parameters will not cause any error.
+        func(null);         //nullundefined
+    </script> -->
+
+    <!-- <script>
+        let func=()=>{
+            return 100;
+        }
+        let res=func();
+        document.write(res);
+
+    </script> -->
+
+    <!-- <script>
+        let func=()=>{
+            return {"key1":"react","key2":"NodeJS","key3":"MongoDB"};
+        }
+        let res=func();
+        let x=res.key1;
+        document.write(x);
+        let y=res["key2"];
+        document.write(y);
+        let {key1,key2,key3} =res;
+        document.write(key3);
+        for(var z in res){
+            document.write(res[z]);
+        }
+    </script> -->
+
+    <!-- <script>
+        let compare=()=>{
+            return [10,20,30,40,50];
+        }
+        let res=compare();
+        //forEach
+        res.forEach((ele,ind)=>{
+            document.write(ele);
+        });
+        document.write("<br>");
+        //for..of
+        for(var x of res){
+            document.write(x);
+        }
+        document.write("<br>");
+        //for
+        for(var i=0;i<5;i++){
+            document.write(res[i]);
+        }
+        document.write("<br>");
+        //while
+        var i=0;
+        while(i<5){
+            document.write(res[i]);
+            i++;
+        }
+        document.write("<br>");
+        //do-while
+        let j=0;
+        do{
+            document.write(res[j]);
+            j++;
+        }while(j<5)
+    </script> -->
+
+    <!-- <script>
+        let awe=()=>{
+            return [{"e_id":"111","e_name":"e_one","e_sal":"10000"},
+            {"e_id":"222","e_name":"e_two","e_sal":"20000"},
+            {"e_id":"333","e_name":"e_three","e_sal":"30000"},
+            {"e_id":"444","e_name":"e_four","e_sal":"40000"},
+            {"e_id":"555","e_name":"e_five","e_sal":"50000"}];
+        };
+
+        let arr = awe();
+        document.write(`<table border="1px" align-items="center" align="center" cellspacing="10px" cellpadding="10px">
+            <tr>
+                <th>e_id</th>
+                <th>e_name</th>
+                <th>e_sal</th>
+            </tr>`);
+        
+        arr.forEach((a,b)=>{
+            let {e_id,e_name,e_sal} = a;
+            document.write(`<tr>`);
+                document.write(`<td>${e_id}</td>`);
+                document.write(`<td>${e_name}</td>`);
+                document.write(`<td>${e_sal}</td>`);
+            document.write(`</tr>`);
+        });
+
+        document.write(`</table>`);
+    </script> -->
+
+    <script>
+        // let func_one=()=>{
+        //     return 10;
+        // }
+        // let func_two=()=>10;
+        // let x=func_one();
+        // let y=func_two();
+        // document.write(x,y);  //1010
+        //when the code in a function is only one line, curly braces and return keyword is optional.
+
+
+        // let func_one=(param1)=>{
+        //     return param1*param1;
+        // }
+        // let x=func_one(100);
+        // document.write(x);
+        
+        // let func_two=param1=>param1*param1;
+        // let y=func_two(100);
+        // document.write(y);
+
+        // let func=(...param1)=>param1; //spread operator
+        // let arr=func(10,20,30,40,50)  //catches more than one parameter.
+        // arr.forEach((ele,ind)=>{
+        //     document.write(ele);
+        // });
+        
+        // let func_one=(param1,param2,...param3)=>{
+        //     return [...param3,param1,param2];
+        // }
+        // let arr=func_one(10,20,30,40,50);
+        // for(x of arr){
+        //     document.write(x);
+        // }
+
+        // let arr1=[10,20,30];
+        // let arr2=[40,50,60];
+        // let arr3=[...arr1,...arr2];
+        // arr3.forEach((element,index)=>document.write(element));
+
+        // let obj1={"key1":"React"};
+        // let obj2={"key2":"Node"};
+        // let obj3={"key3":"MongoDB"};
+        // let obj4={...obj1,...obj2,...obj3};
+        // let {key1,key2,key3} = obj4;
+        // document.write(key1,key2,key3);
+
+        // let func_one=(param1 = "ExcelR")=>{
+        //     document.write(param1,"<br>");
+        // }
+        // func_one(); //ExcelR
+        // func_one("JavaScript"); //JavaScript
+        // func_one(100,200); //100
+        // func_one(undefined); //ExcelR
+        // func_one(null); //null
+
+        let func_one=(param1,param2="react",param3="hello",...param4)=>{
+             document.write(param1,param2,param3,param4);
+        }
+        func_one(); //undefined,react,hello,[]
+        func_one(undefined,undefined,undefined,undefined,undefined); //undefined,react,hello,[undefined,undefined]
+        func_one(null,null,null,null); //null,null,null,[null]
+    </script> 
+
+    <!-- 
+        <input type="text" id="uname" placeholder="enter your name">
+        <br><br>
+        <input type="password" id="upwd" placeholder="enter password">
+        <br><br>
+        <button onclick="login()">
+            login
+        </button>
+        <br><br>
+        <p id="res"></p>
+
+        <script>
+            function login(){
+               let x = document.getElementById("uname").value;
+               let y= document.getElementById("upwd").value;
+
+               if(x=="ExcelR" && y=="ExcelR@123"){
+                document.getElementById("res").innerHTML="Login Success!!!";
+               }
+               else{
+                document.getElementById("res").innerHTML="Login Fail!!!";
+               }
+            }
+        </script>
+    -->
+
+    
+      <!--  <fieldset>
+            <legend>CALCULATOR</legend>
+            <input type="number" id="fnum" >
+            <br><br>
+            <input type="number" id="snum" >
+            <br><br>
+            <input type="number" id="res">
+            <br><br>
+            <button onclick="add()">
+                add
+            </button>
+            <button onclick="sub()">
+                sub
+            </button>
+
+            <script>
+                function add(){
+                    let p=parseInt(document.getElementById("fnum").value);
+                    let q=parseInt(document.getElementById("snum").value);
+                    let r=p+q;
+                    document.getElementById("res").value=r;
+                }
+                function sub(){
+                    let p=parseInt(document.getElementById("fnum").value);
+                    let q=parseInt(document.getElementById("snum").value);
+                    let r=p-q;
+                    document.getElementById("res").value=r;
+                }
+            </script>
+        </fieldset> -->
+    </body> 
+</html> 

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Callback functions</title>
+    </head>
+    <body>
+        <script>
+        // let func_one = (param1) => {
+        //     param1();
+        // }
+        // func_one(() => {
+        //     document.write("welcome to callback functions");
+        // });
+        
+        // let func_one=(param1,param2)=>{
+        //     param1();
+        //     param2();
+        // }
+        // func_one(()=>{
+        //     document.write("front-end ");
+        // },()=>{
+        //     document.write("back-end");
+        // });
+
+        // let func_one=(param1,param2,param3,param4)=>{
+        //     param1();
+        //     param2();
+        //     param3();
+        //     param4();
+        // }
+        // func_one(()=>{
+        //     document.write("HTML");
+        // },()=>{
+        //     document.write("CSS");
+        // },()=>{
+        //     document.write("JavaScript");
+        // },()=>{
+        //     document.write("React");
+        // });
+
+        // let func_one=(param1)=>{
+        //     let res=param1();
+        //     return res;
+        // }
+        // let res1=func_one(()=>{
+        //     return "Hello, ExcelR";
+        // });
+        // document.write(res1);
+
+        // let func_one=(param1)=>{
+        //     let res=param1();
+        //     document.write(res);
+        // }
+        // func_one(()=>{
+        //     return "HeyThere!";
+        // })
+
+        // let func=(param1,param2,param3,param4)=>{
+        //     let res1=param1();
+        //     let res2=param2();
+        //     let res3=param3();
+        //     let res4=param4();
+        //     document.write(res1);
+        //     document.write(res2);
+        //     document.write(res3);
+        //     document.write(res4);
+        // }
+        // func(()=>{
+        //     return "callback1 <br>";
+        // },()=>{
+        //     return "callback2 <br>";
+        // },()=>{
+        //     return "callback3 <br>";
+        // },()=>{
+        //     return "callback4 <br>";
+        // });
+
+        let addition=(num,callback)=>{
+            callback(num+5);
+        }
+        let subtraction=(num,callback)=>{
+            callback(num-3);
+        }
+        let multiplication=(num,callback)=>{
+            callback(num*2);
+        }
+        let division=(num,callback)=>{
+            callback(num/2);
+        }
+        addition(5,(addRes)=>{
+            subtraction(addRes,(subRes)=>{
+                multiplication(subRes,(mulRes)=>{
+                    division(mulRes,(divRes)=>{
+                        document.write(divRes);
+                    })
+                })
+            })
+        })
+        </script>
+    </body>
+</html>

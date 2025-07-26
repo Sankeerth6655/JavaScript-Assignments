@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON Examples</title>
+    </head>
+    <body>
+        <script>
+            var obj1={
+                "key1" : "Hello",
+                "key2" : "JSON"
+            };
+            //1st method
+            var x=obj1.key1;
+            document.write(x);
+            var y=obj1.key2;
+            document.write(y);
+
+            document.write("<br>");
+            
+            //2nd method
+            var p=obj1["key1"];
+            document.write(p);
+            var q=obj1["key2"];
+            document.write(q);
+
+            document.write("<br>");
+            
+            //3rd method
+            //introduced in ES6 version
+            //latest method---Destructuring
+            var{key1,key2}=obj1;
+            document.write(key1,key2);
+
+            document.write("<br>");
+            
+            //we can iterate objects using for--in loop
+            
+            for(var x in obj1){  //loop will run 2 times as there are only two objects in it.
+                document.write(obj1[x]);  //if we print only x it shows key1 and key2. if we print obj1[x] then it prints helloJSON.
+            }
+            
+            document.write("<br>");
+            document.write("<br>");
+
+            
+            obj2={
+                "sub_one" : "Frontend",
+                "sub_two" : "Backend",
+                "sub_three" : "MongoDB"
+            };
+            
+            var a=obj2.sub_one;
+            var b=obj2.sub_two;
+            var c=obj2.sub_three;
+            document.write(a,b,c);
+            
+            document.write("<br>");
+            
+            var d=obj2["sub_one"];
+            var e=obj2["sub_two"];
+            var f=obj2["sub_three"];
+            document.write(d,e,f);
+
+            document.write("<br>");
+            
+            var{sub_one,sub_two,sub_three}=obj2;
+            document.write(sub_one,sub_two,sub_three);
+            
+            document.write("<br>");
+            
+            for(var v in obj2){
+                document.write(obj2[v]);
+            }
+
+            document.write("<br>");
+            document.write("<br>");
+            
+            obj3={
+                "react" : "20.x",
+                "node" : "18.x",
+                "mongodb" : "20.x",
+                "mysql" : 3306
+            };
+            
+            var m=obj3.react;
+            var n=obj3.node;
+            var o=obj3.mongodb;
+            var r=obj3.mysql;
+            document.write(m,n,o,r);
+            
+            document.write("<br>");
+            
+            var s=obj3["react"];
+            var t=obj3["node"];
+            var u=obj3["mongodb"];
+            var v=obj3["mysql"];
+            document.write(s,t,u,v);
+
+            document.write("<br>");
+            
+            var{react,node,mongodb,mysql}=obj3;
+            document.write(react,node,mongodb,mysql);
+            
+            document.write("<br>");
+            
+            for(var w in obj3){
+                document.write(obj3[w]);
+            }
+
+            document.write("<br>");
+            document.write("<br>");
+
+            //object inside object
+
+            var outer={
+                "inner" : {
+                    "key1" : "React",
+                    "key2" : "JS"
+                }
+            };
+
+            var h=outer.inner.key1;
+            var i=outer.inner.key2;
+            document.write(h,i);
+
+            document.write("<br>");
+            
+            var j=outer.inner["key1"];
+            var k=outer.inner["key2"];
+            document.write(j,k);
+            
+            document.write("<br>");
+            
+            var{inner}=outer;
+            var{key1,key2}=inner;
+            document.write(key1,key2);
+            
+            document.write("<br>");
+            
+            for(var l in outer.inner){
+                document.write(inner[l]);
+            }
+            
+            document.write("<br>");
+            document.write("<br>");
+//-------------------------------------------------------------------------------------------------------------------------
+            //array of objects
+
+            var arr1=[
+                {"eid":111 , "ename":"eone","esal":10000,"eimage":"https://reqres.in/img/faces/1-image.jpg"},
+                {"eid":222 , "ename":"etwo","esal":20000,"eimage":"https://reqres.in/img/faces/2-image.jpg"},
+                {"eid":333 , "ename":"ethree","esal":30000,"eimage":"https://reqres.in/img/faces/3-image.jpg"},
+                {"eid":444 , "ename":"efour","esal":40000,"eimage":"https://reqres.in/img/faces/4-image.jpg"},
+                {"eid":555 , "ename":"efive","esal":50000,"eimage":"https://reqres.in/img/faces/5-image.jpg"}
+            ];
+
+            document.write(`<table border="1"
+                                   align-items="center"
+                                   cellspacing="10px"
+                                   cellpadding=10px>
+                                   <tr>
+                                        <th>eid</th>
+                                        <th>ename</th>
+                                        <th>esal</th>
+                                        <th>eimage</th>
+                                    </tr>`)
+            arr1.forEach((element,index)=>{
+                var{eid,ename,esal,eimage}=element;
+                document.write(`<tr>
+                        <td>${eid}</td>
+                        <td>${ename}</td>
+                        <td>${esal}</td>
+                        <td>
+                            <image src=${eimage} width="50px">    
+                        </td>
+                    </tr>`);
+            });
+            document.write(`</table>`);
+            
+            document.write("<br>");
+            
+            var arr2=[
+                {"pid":111,"pname":"laptop","pcost":10000,"pbrand":"dell","pdisc": "10%"},
+                {"pid":222,"pname":"mobile","pcost":20000,"pbrand":"apple","pdisc": "20%"},
+                {"pid":333,"pname":"TV","pcost":30000,"pbrand":"sony","pdisc": "30%"},
+                {"pid":444,"pname":"watch","pcost":40000,"pbrand":"fossil","pdisc": "40%"},
+                {"pid":555,"pname":"headphones","pcost":50000,"pbrand":"marshall","pdisc": "50%"}
+            ];
+            document.write(`<table border="1"
+                                   align-items="center"
+                                   cellspacing="10px"
+                                   cellpadding="10px">
+                                   <tr>
+                                        <th>pid</th>
+                                        <th>pname</th>
+                                        <th>pcost</th>
+                                        <th>pbrand</th>
+                                        <th>pdisc</th>
+                                    </tr>`)
+            arr2.forEach((element,index)=>{
+                var{pid,pname,pcost,pbrand,pdisc}=element;
+                document.write(`<tr>
+                                    <td>${pid}</td>
+                                    <td>${pname}</td>
+                                    <td>${pcost}</td>
+                                    <td>${pbrand}</td>
+                                    <td>${pdisc}</td>
+                                </tr>`);
+            });
+            document.write(`</table`);
+            </script>
+    </body>
+</html>

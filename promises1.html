@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ajax calls</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            let apiCall = new Promise((resolve,reject)=>{
+                $.ajax({
+                    method : "GET",
+                    url : "https://reqres.in/api/users?page=2",
+                    success : (posRes)=>{
+                        resolve(posRes)
+                    },
+                    error : (errRes)=>{
+                        reject(errRes)
+                    }
+                })
+            })
+            (async()=>{
+                let res=await apiCall;
+                console.log(res)
+            })()
+        </script>
+    </body>
+</html>

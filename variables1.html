@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>variables</title>
+    </head>
+    <body>
+        <!-- <script>//VARIABLE DUPLICATING
+            // var x=100;
+            // var x=200;
+            // document.write(x);//200
+
+            let x=200;
+            let x=200;
+            document.write(x); //Uncaught SyntaxError: Identifier 'x' has already been declared
+        </script> -->
+        
+        <!-- <script>//VARIABLE HOISTING
+            // document.write(y);
+            // var y=100; //undefined
+
+            document.write(x);
+            let x=100; //Uncaught ReferenceError: Cannot access 'x' before initialization
+        </script> -->
+        <script>//GLOBAL POLLUTING ISSUE
+            var x=100;
+            document.write(x);//100
+            {
+                var x=200;
+                document.write(x);//200
+            }
+            document.write(x);//200, even though the scope is closed, x will remain 200.
+
+            let y=100;
+            document.write(y);//100
+            {
+                let y=200;
+                document.write(y);//200
+            }
+            document.write(y);//100, the scope of 200 is closed, so now y=100.
+        </script>
+    </body>
+</html>
